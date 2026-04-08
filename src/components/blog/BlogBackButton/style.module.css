@@ -1,0 +1,17 @@
+.blogBackButton {
+  display: flex;
+  gap: 8px;
+}
+
+.blogBackButtonText {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--border-green-color);
+  padding: 14px;
+}
+
+@media (max-width: 1439px) {
+  .blogBackButtonText {
+    display: none;
+  }
+}

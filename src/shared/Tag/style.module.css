@@ -1,0 +1,33 @@
+.tag {
+  display: inline-flex;
+  align-items: center;
+  padding: var(--space-1) var(--space-3);
+  border-radius: var(--radius-pill);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  line-height: 1;
+  letter-spacing: var(--tracking-tight);
+  border: var(--border-width) var(--border-style) transparent;
+  white-space: nowrap;
+}
+
+/* Live in MVP — accent (the project's primary hue) */
+.live {
+  background-color: var(--accent-soft);
+  color: var(--accent);
+  border-color: rgba(99, 102, 241, 0.3);
+}
+
+/* Next — info hue, distinct from accent */
+.next {
+  background-color: var(--status-info-soft);
+  color: var(--status-info);
+  border-color: rgba(96, 165, 250, 0.3);
+}
+
+/* Later — neutral, deliberately quiet */
+.later {
+  background-color: var(--status-neutral-soft);
+  color: var(--text-secondary);
+  border-color: var(--border-default);
+}

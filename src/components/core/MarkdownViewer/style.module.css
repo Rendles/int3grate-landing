@@ -1,0 +1,12 @@
+.markdownViewer {
+  white-space: pre-line;
+}
+
+.markdownViewer a {
+  color: var(--white-color);
+  transition: all 0.2s ease-in-out;
+}
+
+.markdownViewer a:hover {
+  color: var(--grey-color);
+}

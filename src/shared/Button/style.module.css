@@ -1,0 +1,139 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: var(--space-2);
+  border-radius: var(--radius-md);
+  font-weight: var(--font-weight-medium);
+  letter-spacing: var(--tracking-tight);
+  border: var(--border-width) var(--border-style) transparent;
+  cursor: pointer;
+  transition:
+    background-color var(--duration-base) var(--ease-standard),
+    border-color var(--duration-base) var(--ease-standard),
+    color var(--duration-base) var(--ease-standard),
+    transform var(--duration-fast) var(--ease-standard);
+  position: relative;
+  user-select: none;
+}
+
+.button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.button:active:not(:disabled) {
+  transform: translateY(1px);
+}
+
+.xs {
+  min-width: 0;
+  height: 32px;
+  font-size: var(--font-size-sm);
+  padding: 0 var(--space-3);
+}
+
+.sm {
+  min-width: 0;
+  height: 36px;
+  font-size: var(--font-size-sm);
+  padding: 0 var(--space-4);
+}
+
+.md {
+  min-width: 0;
+  height: 44px;
+  font-size: var(--font-size-base);
+  padding: 0 var(--space-5);
+}
+
+.lg {
+  min-width: 0;
+  height: 52px;
+  font-size: var(--font-size-md);
+  padding: 0 var(--space-6);
+  font-weight: var(--font-weight-semibold);
+}
+
+.icon {
+  min-width: 36px;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+}
+
+.fullWidth {
+  width: 100%;
+}
+
+/*
+ * green = primary CTA. Spec §1 ties the primary CTA to the single accent.
+ * The variant name is preserved for backwards-compat with all existing
+ * call sites; visually it now uses the flat accent.
+ */
+.green {
+  background-color: var(--accent);
+  color: var(--accent-contrast);
+  border-color: var(--accent);
+}
+
+.green:hover:not(:disabled) {
+  @media (hover: hover) {
+    background-color: var(--accent-strong);
+    border-color: var(--accent-strong);
+  }
+}
+
+/*
+ * white = secondary. Outline-on-surface treatment.
+ */
+.white {
+  background-color: transparent;
+  color: var(--text-primary);
+  border-color: var(--border-strong);
+}
+
+.white:hover:not(:disabled) {
+  @media (hover: hover) {
+    background-color: var(--surface-raised);
+    border-color: var(--text-tertiary);
+  }
+}
+
+/*
+ * grey = tertiary / ghost. Subtle filled chip.
+ */
+.grey {
+  background-color: var(--surface-raised);
+  color: var(--text-primary);
+  border-color: var(--border-default);
+}
+
+.grey:hover:not(:disabled) {
+  @media (hover: hover) {
+    background-color: var(--surface-overlay);
+    border-color: var(--border-strong);
+  }
+}
+
+/*
+ * black = inverted variant on light surfaces. Rare but kept for callers
+ * that already use it.
+ */
+.black {
+  background-color: var(--surface-base);
+  color: var(--text-primary);
+  border-color: var(--border-strong);
+}
+
+.black:hover:not(:disabled) {
+  @media (hover: hover) {
+    background-color: var(--surface-overlay);
+  }
+}
+
+@media (pointer: coarse) {
+  .button {
+    -webkit-tap-highlight-color: transparent;
+  }
+}

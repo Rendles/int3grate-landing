@@ -1,0 +1,192 @@
+.hero {
+  padding-block: var(--space-20) var(--space-24);
+  padding-inline: var(--page-gutter);
+  position: relative;
+  overflow: hidden;
+}
+
+.heroInner {
+  max-width: var(--container-wide);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+  gap: var(--space-16);
+  align-items: center;
+}
+
+.heroContent {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+}
+
+.heroHeadline {
+  font-size: clamp(40px, 6vw, 64px);
+  line-height: 1.05;
+  letter-spacing: var(--tracking-tighter);
+  font-weight: var(--font-weight-semibold);
+  color: var(--text-primary);
+  max-width: 18ch;
+}
+
+.heroSubheadline {
+  font-size: var(--font-size-lg);
+  line-height: var(--line-height-relaxed);
+  color: var(--text-secondary);
+  max-width: 56ch;
+}
+
+.heroBadge {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--radius-pill);
+  background-color: var(--surface-raised);
+  border: var(--border-width) var(--border-style) var(--border-default);
+  width: fit-content;
+  max-width: 100%;
+}
+
+.heroBadgeDot {
+  width: 8px;
+  height: 8px;
+  border-radius: var(--radius-pill);
+  background-color: var(--status-warning);
+  flex-shrink: 0;
+}
+
+.heroBadgeSegment {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  color: var(--text-secondary);
+  letter-spacing: var(--tracking-tight);
+}
+
+.heroBadgeSeparator {
+  color: var(--text-tertiary);
+  font-size: var(--font-size-xs);
+}
+
+.heroCtas {
+  display: flex;
+  align-items: center;
+  gap: var(--space-6);
+  flex-wrap: wrap;
+}
+
+.heroSecondaryLink {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--text-secondary);
+  letter-spacing: var(--tracking-tight);
+  transition: color var(--duration-base) var(--ease-standard);
+}
+
+.heroSecondaryLink:hover {
+  color: var(--text-primary);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.heroNotify {
+  margin-top: var(--space-2);
+}
+
+.heroVisual {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* === 3-layer diagram === */
+.diagram {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  width: 100%;
+  max-width: 480px;
+  padding: var(--space-6);
+  border-radius: var(--radius-xl);
+  background-color: var(--surface-raised);
+  border: var(--border-width) var(--border-style) var(--border-default);
+}
+
+.diagramLayer {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  padding: var(--space-5) var(--space-5);
+  border-radius: var(--radius-lg);
+  background-color: var(--surface-overlay);
+  border: var(--border-width) var(--border-style) var(--border-default);
+}
+
+.diagramLayerLabel {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  color: var(--text-tertiary);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-wide);
+}
+
+.diagramLayerNote {
+  font-size: var(--font-size-sm);
+  color: var(--text-secondary);
+  line-height: var(--line-height-snug);
+}
+
+.diagramLayerEmphasized {
+  background-color: var(--accent-soft);
+  border-color: rgba(99, 102, 241, 0.4);
+  padding: var(--space-6) var(--space-5);
+  box-shadow: var(--shadow-md);
+}
+
+.diagramLayerEmphasized .diagramLayerLabel {
+  color: var(--accent);
+}
+
+.diagramLayerChips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-top: var(--space-1);
+}
+
+.diagramChip {
+  padding: var(--space-1) var(--space-3);
+  border-radius: var(--radius-pill);
+  background-color: var(--surface-raised);
+  border: var(--border-width) var(--border-style) var(--border-default);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  color: var(--text-primary);
+  letter-spacing: var(--tracking-tight);
+}
+
+@media (max-width: 1024px) {
+  .heroInner {
+    grid-template-columns: minmax(0, 1fr);
+    gap: var(--space-12);
+  }
+
+  .heroVisual {
+    order: 2;
+  }
+
+  .heroContent {
+    order: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding-block: var(--space-12) var(--space-16);
+  }
+
+  .heroBadge {
+    padding: var(--space-2) var(--space-3);
+  }
+}

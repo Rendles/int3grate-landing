@@ -1,0 +1,33 @@
+.noResultsFound {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 48px;
+}
+
+.noResultsFoundTitle {
+  font-weight: 500;
+}
+
+@media (max-width: 1439px) {
+  .noResultsFoundIcon {
+    width: 48px;
+    height: 48px;
+  }
+
+  .noResultsFound {
+    gap: 32px;
+  }
+}
+
+@media (max-width: 810px) {
+  .noResultsFoundIcon {
+    width: 32px;
+    height: 32px;
+  }
+
+  .noResultsFound {
+    gap: 24px;
+  }
+}

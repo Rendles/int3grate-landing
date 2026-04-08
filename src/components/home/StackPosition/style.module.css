@@ -1,0 +1,129 @@
+.stack {
+  padding-block: var(--space-24);
+  padding-inline: var(--page-gutter);
+  border-top: var(--border-width) var(--border-style) var(--border-default);
+}
+
+.stackInner {
+  max-width: var(--container-default);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-16);
+}
+
+.stackHeader {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+  max-width: 70ch;
+}
+
+.stackHeading {
+  font-size: clamp(28px, 4vw, 40px);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: var(--tracking-tighter);
+  color: var(--text-primary);
+}
+
+.stackIntro {
+  font-size: var(--font-size-md);
+  color: var(--text-secondary);
+  line-height: var(--line-height-relaxed);
+}
+
+.stackGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-6);
+}
+
+.stackCard {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+  padding: var(--space-8);
+  border-radius: var(--radius-xl);
+  background-color: var(--surface-raised);
+  border: var(--border-width) var(--border-style) var(--border-default);
+  transition:
+    border-color var(--duration-base) var(--ease-standard),
+    background-color var(--duration-base) var(--ease-standard);
+}
+
+.stackCard:hover {
+  border-color: var(--border-strong);
+  background-color: var(--surface-overlay);
+}
+
+.stackCardTitle {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+  color: var(--text-primary);
+  letter-spacing: var(--tracking-tight);
+}
+
+.stackCardList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  margin: 0;
+}
+
+.stackCardRow {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  padding-block: var(--space-3);
+  border-top: var(--border-width) var(--border-style) var(--border-default);
+}
+
+.stackCardRow:first-child {
+  border-top: none;
+  padding-top: 0;
+}
+
+.stackCardLabel {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  color: var(--text-tertiary);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-wide);
+}
+
+.stackCardLabelAdd {
+  color: var(--accent);
+}
+
+.stackCardValue {
+  margin: 0;
+  font-size: var(--font-size-sm);
+  color: var(--text-secondary);
+  line-height: var(--line-height-relaxed);
+}
+
+.stackClosing {
+  text-align: center;
+  font-size: var(--font-size-lg);
+  color: var(--text-primary);
+  line-height: var(--line-height-relaxed);
+  max-width: 64ch;
+  margin: 0 auto;
+  font-weight: var(--font-weight-medium);
+}
+
+@media (max-width: 1024px) {
+  .stackGrid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .stack {
+    padding-block: var(--space-16);
+  }
+
+  .stackInner {
+    gap: var(--space-12);
+  }
+}

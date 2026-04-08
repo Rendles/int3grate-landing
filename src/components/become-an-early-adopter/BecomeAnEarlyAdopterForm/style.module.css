@@ -1,0 +1,28 @@
+.becomeAnEarlyAdopterForm {
+  display: flex;
+  flex-direction: column;
+  row-gap: 24px;
+  justify-content: center;
+  align-items: stretch;
+  font-size: 14px;
+  padding: 120px 0;
+  max-width: 500px;
+  width: 100%;
+
+  @media (max-width: 768px) {
+    padding: 75px 0;
+  }
+
+  button {
+    font-weight: 600;
+  }
+}
+
+.becomeAnEarlyAdopterFormText {
+  color: var(--white-color);
+}
+
+.becomeAnEarlyAdopterFormError {
+  text-align: center;
+  color: red;
+}

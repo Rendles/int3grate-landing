@@ -1,0 +1,68 @@
+:root {
+  /*
+   * Brand accent — single strong accent.
+   * Swap these three values to retheme the entire app. Spec §1.9: "one strong
+   * accent. No AI startup gradient soup." — accent is intentionally flat,
+   * not a gradient.
+   */
+  --accent: #6366f1;
+  --accent-strong: #4f46e5;
+  --accent-soft: rgba(99, 102, 241, 0.12);
+  --accent-contrast: #ffffff;
+
+  /* Neutral surface ramp — dark theme, low chroma */
+  --surface-base: #08080b;
+  --surface-raised: #0e0e12;
+  --surface-overlay: #14141a;
+  --surface-sunken: #050507;
+
+  /* Text */
+  --text-primary: #f4f4f5;
+  --text-secondary: #a1a1aa;
+  --text-tertiary: #71717a;
+  --text-on-accent: #ffffff;
+
+  /* Borders */
+  --border-default: #1f1f24;
+  --border-strong: #2a2a31;
+  --border-accent: var(--accent);
+
+  /*
+   * Status hues for badges, tags, inline status.
+   * Muted, not neon. Used by Badge / Tag primitives.
+   */
+  --status-info: #60a5fa;
+  --status-info-soft: rgba(96, 165, 250, 0.14);
+  --status-success: #34d399;
+  --status-success-soft: rgba(52, 211, 153, 0.14);
+  --status-warning: #fbbf24;
+  --status-warning-soft: rgba(251, 191, 36, 0.14);
+  --status-neutral: #a1a1aa;
+  --status-neutral-soft: rgba(161, 161, 170, 0.14);
+
+  /* Form-control field background */
+  --field-bg: #0b0b10;
+  --field-bg-hover: #101016;
+  --field-border: var(--border-strong);
+  --field-border-hover: #34343c;
+  --field-border-focus: var(--accent);
+
+  /*
+   * Legacy aliases — kept so unmigrated section components keep compiling
+   * and pick up the new theme automatically. Do not introduce new usages of
+   * these names; reach for the semantic tokens above instead.
+   */
+  --white-color: var(--text-primary);
+  --black-color: var(--surface-base);
+  --grey-color: var(--text-secondary);
+  --border-grey-color: var(--border-default);
+  --border-green-color: var(--accent);
+  --main-green-color: var(--accent);
+  --secondary-green-color: var(--accent);
+  --main-background-color: var(--surface-base);
+  --primary-background-color: var(--surface-raised);
+  --secondary-background-color: var(--surface-overlay);
+  --main-gradient-color: var(--accent);
+  --grid-color: var(--border-default);
+  --box-shadow-color: rgba(0, 0, 0, 0.4);
+}

@@ -1,0 +1,114 @@
+.footer {
+  background-color: var(--surface-sunken);
+  border-top: var(--border-width) var(--border-style) var(--border-default);
+  padding-block: var(--space-16);
+  padding-inline: var(--page-gutter);
+}
+
+.footerInner {
+  max-width: var(--container-wide);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-12);
+}
+
+.footerTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: var(--space-12);
+}
+
+.footerBrand {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  max-width: 320px;
+}
+
+.footerLogoLink {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+}
+
+.footerLogo {
+  font-weight: var(--font-weight-semibold);
+  font-size: var(--font-size-md);
+  letter-spacing: var(--tracking-tight);
+  color: var(--text-primary);
+}
+
+.footerNav {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  min-width: 160px;
+}
+
+.footerColTitle {
+  color: var(--text-tertiary);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+}
+
+.footerList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.footerLink {
+  font-size: var(--font-size-sm);
+  color: var(--text-secondary);
+  transition: color var(--duration-base) var(--ease-standard);
+}
+
+.footerLink:hover {
+  color: var(--text-primary);
+}
+
+.footerBottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-6);
+  padding-top: var(--space-8);
+  border-top: var(--border-width) var(--border-style) var(--border-default);
+}
+
+.rightsReserved {
+  color: var(--text-tertiary);
+  font-size: var(--font-size-sm);
+}
+
+.footerLegalLink {
+  font-size: var(--font-size-sm);
+  color: var(--text-secondary);
+  transition: color var(--duration-base) var(--ease-standard);
+}
+
+.footerLegalLink:hover {
+  color: var(--text-primary);
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding-block: var(--space-12);
+  }
+
+  .footerTop {
+    flex-direction: column;
+    gap: var(--space-10);
+  }
+
+  .footerBottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-3);
+    text-align: left;
+  }
+}

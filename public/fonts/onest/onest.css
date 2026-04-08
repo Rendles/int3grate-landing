@@ -1,0 +1,63 @@
+@import "./Onest-Black.ttf";
+@import "./Onest-Bold.ttf";
+@import "./Onest-ExtraBold.ttf";
+@import "./Onest-Medium.ttf";
+@import "./Onest-Regular.ttf";
+@import "./Onest-SemiBold.ttf";
+@import "./Onest-Light.ttf";
+
+@font-face {
+  font-family: "Onest";
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url("./Onest-Light.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Onest";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("./Onest-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Onest";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("./Onest-Medium.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Onest";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("./Onest-SemiBold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Onest";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("./Onest-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Onest";
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url("./Onest-ExtraBold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Onest";
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url("./Onest-Black.ttf") format("truetype");
+}

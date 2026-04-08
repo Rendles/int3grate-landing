@@ -1,0 +1,329 @@
+.blogPageSkeleton {
+  margin: 0 auto;
+  max-width: 1234px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 48px;
+  padding: 75px 0px;
+}
+
+.blogCardSkeletonMostPopularTitle {
+  display: none;
+}
+
+.blogPageSkeletonHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+.blogPageSkeletonTitle {
+  font-weight: 600;
+  font-size: 48px;
+  color: var(--grey-color);
+}
+
+.blogPageSkeletonSubtitle {
+  width: 494px;
+  height: 26px;
+  background: var(--primary-background-color);
+  border-radius: 10px;
+}
+
+.blogPageSkeletonSearchForm {
+  width: 100%;
+  justify-content: center;
+  display: flex;
+  gap: 24px;
+}
+
+.blogPageSkeletonSearchFormInput {
+  width: 100%;
+  height: 56px;
+  background: var(--primary-background-color);
+  border-radius: 10px;
+}
+
+.blogPageSkeletonSearchFormButton {
+  width: 146px;
+  height: 56px;
+  background: var(--primary-background-color);
+  border-radius: 10px;
+}
+
+.blogPageSkeletonTags {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 16px;
+  row-gap: 12px;
+  justify-content: center;
+}
+
+.blogCardSkeletonTags {
+  display: flex;
+  gap: 12px;
+}
+
+.blogCardSkeletonTag,
+.blogPageSkeletonTag {
+  width: 129px;
+  height: 36px;
+  background: var(--primary-background-color);
+  border-radius: 10px;
+}
+
+.blogPageSkeletonCards {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+}
+
+.blogPageSkeletonCardsTop {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+}
+
+.blogCardSkeleton {
+  max-width: 605px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 24px;
+  border-radius: 10px;
+  background-color: var(--secondary-background-color);
+}
+
+.blogCardSkeletonImage {
+  width: 100%;
+  height: 300px;
+  border-radius: 10px;
+  background: var(--primary-background-color);
+}
+
+.blogCardSkeletonHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.blogCardSkeletonHeaderText {
+  width: 100%;
+  height: 24px;
+  background: var(--primary-background-color);
+  border-radius: 10px;
+}
+
+.blogCardSkeletonButtons {
+  display: flex;
+  gap: 12px;
+}
+
+.blogCardSkeletonButton {
+  border-radius: 50%;
+  height: 24px;
+  width: 24px;
+  background-color: var(--primary-background-color);
+}
+
+.blogCardSkeletonDescription {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 4px;
+}
+
+.blogCardSkeletonDescriptionLine {
+  height: 14px;
+  background-color: var(--primary-background-color);
+  border-radius: 10px;
+  width: 100%;
+}
+
+.blogPageSkeletonCardsThreeCols,
+.blogPageSkeletonCardsTwoCols {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  max-width: 1234px;
+  width: 100%;
+}
+
+.blogPageSkeletonMostPopularContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 24px;
+  background-color: var(--secondary-background-color);
+  border-radius: 10px;
+}
+
+.blogPageSkeletonMostPopularHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.blogPageSkeletonMostPopularTitle {
+  font-size: 32px;
+  font-weight: 500;
+  color: var(--grey-color);
+}
+
+.blogPageSkeletonMostPopularButton {
+  width: 124px;
+  height: 52px;
+  background-color: var(--primary-background-color);
+  border-radius: 10px;
+}
+
+@media (max-width: 1439px) {
+  .blogPageSkeleton {
+    gap: 32px;
+    max-width: 730px;
+  }
+
+  .blogPageSkeletonTitle {
+    font-size: 36px;
+  }
+
+  .blogPageSkeletonMostPopularTitle {
+    font-size: 34px;
+  }
+
+  .blogPageSkeletonMostPopularButton {
+    width: 105px;
+  }
+
+  .blogPageSkeletonSearchFormInput {
+    width: 100%;
+    height: 48px;
+  }
+
+  .blogPageSkeletonCards {
+    gap: 20px;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .blogPageSkeletonCardsTop {
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  .blogPageSkeletonSearchFormButton {
+    width: 120px;
+    height: 48px;
+  }
+
+  .blogPageSkeletonTags {
+    flex-wrap: nowrap;
+    overflow: hidden;
+    justify-content: flex-start;
+    max-width: 730px;
+  }
+
+  .blogPageSkeletonTag:nth-child(n + 1):nth-child(-n + 11) {
+    display: none;
+  }
+
+  .blogPageSkeletonCardsThreeCols,
+  .blogPageSkeletonCardsTwoCols {
+    max-width: 355px;
+    justify-content: start;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .blogPageSkeletonMostPopularContainer {
+    background-color: transparent;
+    padding: 0;
+    width: 100%;
+    max-width: 355px;
+  }
+
+  .isMostPopular {
+    max-width: 355px;
+
+    .blogCardSkeletonButtons,
+    .blogCardSkeletonImage,
+    .blogCardSkeletonDescription {
+      display: none;
+    }
+
+    .blogCardSkeletonMostPopularTitle {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+  }
+}
+
+@media (max-width: 810px) {
+  .blogPageSkeleton {
+    max-width: 350px;
+  }
+
+  .blogPageSkeletonTitle {
+    font-size: 24px;
+  }
+
+  .blogPageSkeletonMostPopularTitle {
+    font-size: 28px;
+  }
+  .blogPageSkeletonCardsThreeCols,
+  .blogPageSkeletonCardsTwoCols {
+    gap: 16px;
+  }
+
+  .blogPageSkeletonCardsTop {
+    gap: 16px;
+    flex-direction: column-reverse;
+  }
+
+  .blogPageSkeletonCards {
+    gap: 16px;
+  }
+
+  .blogPageSkeletonSearchForm {
+    gap: 12px;
+  }
+
+  .blogPageSkeletonSearchFormInput {
+    width: 100%;
+    height: 42px;
+  }
+
+  .blogPageSkeletonSearchFormButton {
+    width: 42px;
+    height: 42px;
+    flex-shrink: 0;
+  }
+
+  .blogPageSkeletonTags {
+    flex-wrap: nowrap;
+    overflow: hidden;
+    justify-content: flex-start;
+  }
+}
+
+.pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}

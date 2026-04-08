@@ -1,0 +1,80 @@
+.toolbarContainer {
+  display: none;
+}
+
+.toolbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  padding: var(--space-4) var(--page-gutter);
+  gap: var(--space-10);
+  background-color: var(--surface-base);
+  z-index: 100;
+}
+
+.toolbarTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: var(--header-height);
+}
+
+.toolbarLogoLink {
+  display: inline-flex;
+  align-items: center;
+}
+
+.toolbarLogo {
+  font-weight: var(--font-weight-semibold);
+  font-size: var(--font-size-md);
+  letter-spacing: var(--tracking-tight);
+  color: var(--text-primary);
+}
+
+.toolbarNavList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.toolbarNavListItem {
+  display: block;
+}
+
+.toolbarNavListLink {
+  display: block;
+  padding: var(--space-3) 0;
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-medium);
+  color: var(--text-secondary);
+  letter-spacing: var(--tracking-tight);
+  transition: color var(--duration-base) var(--ease-standard);
+}
+
+.toolbarNavListLink:hover {
+  color: var(--text-primary);
+}
+
+.toolbarNavListLinkActive {
+  color: var(--text-primary);
+}
+
+.toolbarButtons {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  width: 100%;
+  margin-top: auto;
+  padding-bottom: var(--space-8);
+}
+
+@media (max-width: 768px) {
+  .toolbarContainer {
+    display: block;
+  }
+}

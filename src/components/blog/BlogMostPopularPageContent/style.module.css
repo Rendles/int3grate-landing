@@ -1,0 +1,91 @@
+.blogMostPopularPage {
+  margin: 0 auto;
+  max-width: 1234px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 48px;
+  padding: 75px 0px;
+}
+
+.blogMostPopularPageHeader {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.blogMostPopularPageTitle {
+  text-align: center;
+  font-weight: 600;
+  font-size: 48px;
+}
+
+.blogBackButtonContainer {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.blogMostPopularPageCards {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.blogMostPopularPageCardsTwoCols {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  max-width: 1234px;
+}
+
+.blogMostPopularPageCardsThreeCols {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  max-width: 1234px;
+}
+
+@media (max-width: 1439px) {
+  .blogMostPopularPage {
+    max-width: 730px;
+  }
+
+  .blogMostPopularPageTitle {
+    font-size: 36px;
+  }
+
+  .blogMostPopularPageCards {
+    flex-direction: row;
+  }
+
+  .blogMostPopularPageCardsTwoCols {
+    max-width: 355px;
+    justify-content: start;
+    flex-direction: column;
+  }
+
+  .blogMostPopularPageCardsThreeCols {
+    max-width: 355px;
+    justify-content: start;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 810px) {
+  .blogMostPopularPage {
+    max-width: 350px;
+  }
+
+  .blogMostPopularPageTitle {
+    font-size: 28px;
+  }
+
+  .blogMostPopularPageCards {
+    flex-direction: column;
+  }
+}

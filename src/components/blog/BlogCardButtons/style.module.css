@@ -1,0 +1,8 @@
+.blogCardButtons {
+  display: flex;
+  gap: 12px;
+}
+
+.blogCardButtonsButton:hover {
+  opacity: 0.7;
+}

@@ -1,0 +1,25 @@
+.sidebar {
+  padding: 40px 15px;
+}
+
+.sidebarListItem {
+  padding: 8px;
+  box-shadow: border-box;
+}
+
+.sidebarTitle {
+  margin-bottom: 24px;
+}
+
+.sidebarLink {
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    display: none;
+  }
+}

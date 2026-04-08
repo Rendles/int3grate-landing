@@ -1,0 +1,13 @@
+@media (max-width: 1439px) {
+  .blogSearchButton {
+    height: 48px;
+  }
+}
+
+@media (max-width: 810px) {
+  .blogSearchButton {
+    min-width: 36px;
+    height: 36px;
+    padding: 0;
+  }
+}

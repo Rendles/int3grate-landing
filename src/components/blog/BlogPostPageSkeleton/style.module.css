@@ -1,0 +1,252 @@
+.blogPostPageSkeleton {
+  margin: 0 auto;
+  max-width: 1234px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 48px;
+  padding: 75px 0px;
+}
+
+.blogPostPageHeader {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.blogBackButtonContainer {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.blogPostDataContainer {
+  width: 100%;
+  display: flex;
+  gap: 48px;
+}
+
+.blogPostData {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  max-width: 731px;
+  width: 100%;
+}
+
+.blogPostPageSkeletonImageContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.blogPostDataInfo {
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.blogPostPageSkeletonMostPopular {
+  width: 100%;
+  max-width: 461px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.blogPostPageSkeletonMostPopularTitle {
+  font-size: 44px;
+  font-weight: 600;
+  color: 'var(--grey-color)';
+}
+
+.blogPostPageSkeletonTitle {
+  border-radius: 10px;
+  height: 37px;
+  width: 726px;
+  background-color: var(--primary-background-color);
+}
+
+.blogPostPageSkeletonBackButton {
+  border-radius: 10px;
+  height: 37px;
+  width: 143px;
+  background-color: var(--primary-background-color);
+}
+
+.blogPostPageSkeletonImage {
+  border-radius: 10px;
+  height: 400px;
+  width: 731px;
+  background: var(--primary-background-color);
+}
+
+.blogPostPageSkeletonInfoText {
+  border-radius: 10px;
+  height: 24px;
+  width: 100%;
+  max-width: 320px;
+  background-color: var(--primary-background-color);
+}
+
+.blogPostPageSkeletonIcon {
+  border-radius: 50%;
+  height: 32px;
+  width: 32px;
+  background-color: var(--primary-background-color);
+}
+
+.blogPostPageSkeletonTags {
+  display: flex;
+  gap: 12px;
+}
+
+.blogPostPageSkeletonTag {
+  border-radius: 10px;
+  height: 36px;
+  max-width: 143px;
+  width: 100%;
+  background-color: var(--primary-background-color);
+}
+
+.blogPostPageSkeletonDescriptionLine {
+  border-radius: 10px;
+  height: 10px;
+  width: 100%;
+  background: var(--primary-background-color);
+}
+
+.blogPostPageSkeletonPopularCard {
+  border-radius: 10px;
+  height: 180px;
+  width: 100%;
+  max-width: 461px;
+  background: var(--secondary-background-color);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 24px;
+}
+
+.blogPostPageSkeletonPopularTitle {
+  border-radius: 10px;
+  height: 40px;
+  width: 100%;
+  background: var(--primary-background-color);
+}
+
+.blogPostPageSkeletonPopularText {
+  border-radius: 10px;
+  height: 18px;
+  width: 100%;
+  max-width: 291px;
+  background: var(--primary-background-color);
+}
+
+.blogPostPageSkeletonPopularTag {
+  border-radius: 10px;
+  height: 34px;
+  width: 100%;
+  max-width: 116px;
+  background: var(--primary-background-color);
+}
+
+.blogPostPageSkeletonIcons {
+  display: flex;
+  gap: 12px;
+}
+
+.blogPostPageSkeletonDescription {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.blogPostPageSkeletonPopularTags {
+  display: flex;
+  gap: 12px;
+}
+
+@media (max-width: 1439px) {
+  .blogPostPageSkeleton {
+    max-width: 730px;
+  }
+
+  .blogPostPageSkeletonTitle {
+    width: 310px;
+    height: 32px;
+  }
+
+  .blogPostPageSkeletonBackButton {
+    width: 32px;
+    height: 32px;
+  }
+
+  .blogPostPageSkeletonMostPopular {
+    display: none;
+  }
+
+  .blogPostPageSkeletonDescription {
+    width: 312px;
+  }
+
+  .blogPostData {
+    justify-content: space-between;
+    gap: 40px;
+    flex-direction: row;
+  }
+
+  .blogPostPageSkeletonImage {
+    width: 378px;
+    height: 286px;
+  }
+
+  .blogPostPageSkeletonImageContainer {
+    gap: 8px;
+  }
+}
+
+@media (max-width: 810px) {
+  .blogPostPageSkeleton {
+    max-width: 350px;
+    gap: 24px;
+  }
+
+  .blogPostData {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .blogPostPageSkeletonImage {
+    width: 350px;
+    height: 286px;
+  }
+
+  .blogPostPageSkeletonImageContainer {
+    gap: 12px;
+  }
+
+  .blogBackButtonContainer {
+    display: none;
+  }
+}
+
+.pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}

@@ -1,0 +1,5 @@
+.divider {
+  border-left: var(--border-width) var(--border-style) var(--border-default);
+  height: 16px;
+  margin: 0 var(--space-2);
+}

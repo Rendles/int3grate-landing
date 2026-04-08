@@ -1,0 +1,169 @@
+.blogPostPage {
+  margin: 0 auto;
+  max-width: 1234px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 48px;
+  padding: 75px 0px;
+}
+
+.blogPostPageHeader {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.blogPostPageTitle {
+  text-align: center;
+  font-weight: 400;
+  font-size: 32px;
+  max-width: 900px;
+}
+
+.blogBackButtonContainer {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.blogPostDataContainer {
+  width: 100%;
+  display: flex;
+  gap: 48px;
+}
+
+.blogPostData {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  max-width: 731px;
+  width: 100%;
+}
+
+.blogPostDataImageContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.blogPostDataImageContainerBlogMedia {
+  height: 400px;
+}
+
+.blogPostDataInfo {
+  display: flex;
+  justify-content: space-between;
+}
+
+.blogPostDataInfoText {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.blogPostDataTags {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.blogPostPageDescription {
+  font-weight: 300;
+  color: var(--grey-color);
+}
+
+.blogPostPageMostPopular {
+  max-width: 461px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.blogPostPageMostPopularTitle {
+  font-size: 44px;
+  font-weight: 600;
+  color: var(--white-color);
+}
+
+@media (max-width: 1439px) {
+  .blogPostPage {
+    max-width: 730px;
+  }
+
+  .blogPostPageMostPopular {
+    display: none;
+  }
+
+  .blogPostPageTitle {
+    font-size: 26px;
+    max-width: 600px;
+  }
+
+  .blogPostPageDescription {
+    max-width: 312px;
+  }
+
+  .blogPostData {
+    justify-content: space-between;
+    gap: 40px;
+    flex-direction: row;
+  }
+
+  .blogPostDataInfoText {
+    font-size: 14px;
+  }
+
+  .blogPostDataImageContainer {
+    gap: 8px;
+  }
+}
+
+@media (max-width: 810px) {
+  .blogPostPage {
+    max-width: 350px;
+    gap: 24px;
+  }
+
+  .blogPostDataInfoText {
+    font-size: 12px;
+  }
+
+  .blogPostData {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .blogPostDataImageContainerBlogMedia {
+    height: 286px;
+  }
+
+  .blogPostDataImageContainer {
+    gap: 12px;
+  }
+
+  .blogPostDataTags {
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .blogPostDataTags::-webkit-scrollbar {
+    display: none;
+  }
+
+  .blogPostPageTitle {
+    font-size: 18px;
+    max-width: 262px;
+  }
+
+  .blogBackButtonContainer {
+    top: 0;
+    transform: translateY(0%);
+  }
+}
