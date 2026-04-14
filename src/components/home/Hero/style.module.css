@@ -20,13 +20,36 @@
   gap: var(--space-8);
 }
 
+.heroBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--radius-pill);
+  background-color: var(--surface-raised);
+  border: var(--border-width) var(--border-style) var(--border-default);
+  width: fit-content;
+}
+
+.heroBadgeIcon {
+  color: var(--accent);
+  flex-shrink: 0;
+}
+
+.heroBadgeText {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  color: var(--text-secondary);
+  letter-spacing: var(--tracking-tight);
+}
+
 .heroHeadline {
   font-size: clamp(40px, 6vw, 64px);
   line-height: 1.05;
   letter-spacing: var(--tracking-tighter);
   font-weight: var(--font-weight-semibold);
   color: var(--text-primary);
-  max-width: 18ch;
+  max-width: 20ch;
 }
 
 .heroSubheadline {
@@ -36,62 +59,41 @@
   max-width: 56ch;
 }
 
-.heroBadge {
-  display: inline-flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: var(--space-2);
-  padding: var(--space-2) var(--space-4);
-  border-radius: var(--radius-pill);
-  background-color: var(--surface-raised);
-  border: var(--border-width) var(--border-style) var(--border-default);
-  width: fit-content;
-  max-width: 100%;
-}
-
-.heroBadgeDot {
-  width: 8px;
-  height: 8px;
-  border-radius: var(--radius-pill);
-  background-color: var(--status-warning);
-  flex-shrink: 0;
-}
-
-.heroBadgeSegment {
-  font-size: var(--font-size-xs);
-  font-weight: var(--font-weight-medium);
-  color: var(--text-secondary);
-  letter-spacing: var(--tracking-tight);
-}
-
-.heroBadgeSeparator {
-  color: var(--text-tertiary);
-  font-size: var(--font-size-xs);
-}
-
 .heroCtas {
   display: flex;
   align-items: center;
-  gap: var(--space-6);
+  gap: var(--space-4);
   flex-wrap: wrap;
 }
 
-.heroSecondaryLink {
-  font-size: var(--font-size-sm);
-  font-weight: var(--font-weight-medium);
-  color: var(--text-secondary);
-  letter-spacing: var(--tracking-tight);
-  transition: color var(--duration-base) var(--ease-standard);
+/* === Metric strip === */
+.heroMetrics {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-4);
 }
 
-.heroSecondaryLink:hover {
+.heroMetricCard {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  padding: var(--space-4) var(--space-5);
+  border-radius: var(--radius-lg);
+  background-color: var(--surface-raised);
+  border: var(--border-width) var(--border-style) var(--border-default);
+}
+
+.heroMetricValue {
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-semibold);
   color: var(--text-primary);
-  text-decoration: underline;
-  text-underline-offset: 4px;
+  letter-spacing: var(--tracking-tight);
 }
 
-.heroNotify {
-  margin-top: var(--space-2);
+.heroMetricLabel {
+  font-size: var(--font-size-xs);
+  color: var(--text-tertiary);
+  letter-spacing: var(--tracking-tight);
 }
 
 .heroVisual {
@@ -100,30 +102,32 @@
   justify-content: center;
 }
 
-/* === 3-layer diagram === */
-.diagram {
+/* === Dashboard mockup === */
+.dashboard {
   display: flex;
   flex-direction: column;
-  gap: var(--space-3);
+  gap: var(--space-4);
   width: 100%;
-  max-width: 480px;
   padding: var(--space-6);
   border-radius: var(--radius-xl);
   background-color: var(--surface-raised);
   border: var(--border-width) var(--border-style) var(--border-default);
 }
 
-.diagramLayer {
+.dashboardHeader {
   display: flex;
-  flex-direction: column;
-  gap: var(--space-2);
-  padding: var(--space-5) var(--space-5);
-  border-radius: var(--radius-lg);
-  background-color: var(--surface-overlay);
-  border: var(--border-width) var(--border-style) var(--border-default);
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: var(--space-3);
 }
 
-.diagramLayerLabel {
+.dashboardHeader > div {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.dashboardHeaderLabel {
   font-size: var(--font-size-xs);
   font-weight: var(--font-weight-semibold);
   color: var(--text-tertiary);
@@ -131,39 +135,139 @@
   letter-spacing: var(--tracking-wide);
 }
 
-.diagramLayerNote {
+.dashboardHeaderSub {
   font-size: var(--font-size-sm);
   color: var(--text-secondary);
+}
+
+/* KPI cards */
+.dashboardKpis {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-3);
+}
+
+.dashboardKpi {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  padding: var(--space-5);
+  border-radius: var(--radius-lg);
+  background-color: var(--surface-overlay);
+  border: var(--border-width) var(--border-style) var(--border-default);
+}
+
+.dashboardKpiLabel {
+  font-size: var(--font-size-xs);
+  color: var(--text-tertiary);
+  letter-spacing: var(--tracking-tight);
+}
+
+.dashboardKpiValue {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-semibold);
+  color: var(--text-primary);
+  font-variant-numeric: tabular-nums;
+  letter-spacing: var(--tracking-tighter);
+}
+
+.dashboardKpiNote {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--font-size-xs);
+  color: var(--status-success);
+}
+
+.dashboardKpiCheck {
+  font-size: var(--font-size-xs);
+}
+
+.dashboardKpiCaption {
+  font-size: var(--font-size-xs);
+  color: var(--text-tertiary);
   line-height: var(--line-height-snug);
 }
 
-.diagramLayerEmphasized {
-  background-color: var(--accent-soft);
-  border-color: rgba(99, 102, 241, 0.4);
-  padding: var(--space-6) var(--space-5);
-  box-shadow: var(--shadow-md);
-}
-
-.diagramLayerEmphasized .diagramLayerLabel {
-  color: var(--accent);
-}
-
-.diagramLayerChips {
+/* Active agents panel */
+.dashboardAgents {
   display: flex;
-  flex-wrap: wrap;
-  gap: var(--space-2);
-  margin-top: var(--space-1);
+  flex-direction: column;
+  gap: var(--space-3);
+  padding: var(--space-5);
+  border-radius: var(--radius-lg);
+  background-color: var(--surface-overlay);
+  border: var(--border-width) var(--border-style) var(--border-default);
 }
 
-.diagramChip {
-  padding: var(--space-1) var(--space-3);
-  border-radius: var(--radius-pill);
+.dashboardAgentsHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: var(--space-3);
+}
+
+.dashboardAgentsHeader > div {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.dashboardAgentsTitle {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  color: var(--text-primary);
+  letter-spacing: var(--tracking-tight);
+}
+
+.dashboardAgentsSub {
+  font-size: var(--font-size-xs);
+  color: var(--text-tertiary);
+}
+
+.dashboardAgentsUpdated {
+  font-size: var(--font-size-xs);
+  color: var(--text-tertiary);
+  white-space: nowrap;
+}
+
+.dashboardAgentsList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.dashboardAgentRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius-md);
   background-color: var(--surface-raised);
   border: var(--border-width) var(--border-style) var(--border-default);
-  font-size: var(--font-size-xs);
+}
+
+.dashboardAgentInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.dashboardAgentName {
+  font-size: var(--font-size-sm);
   font-weight: var(--font-weight-medium);
   color: var(--text-primary);
   letter-spacing: var(--tracking-tight);
+}
+
+.dashboardAgentTask {
+  font-size: var(--font-size-xs);
+  color: var(--text-tertiary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 @media (max-width: 1024px) {
@@ -186,7 +290,23 @@
     padding-block: var(--space-12) var(--space-16);
   }
 
+  .heroMetrics {
+    grid-template-columns: 1fr;
+  }
+
   .heroBadge {
     padding: var(--space-2) var(--space-3);
+  }
+
+  .dashboardKpis {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .dashboardAgentRow {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-2);
   }
 }

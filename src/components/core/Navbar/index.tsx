@@ -10,22 +10,18 @@ import styles from './style.module.css';
 import { Button, Link } from '@/shared';
 
 const NAV_LINKS = [
-  { label: 'Home', href: '/' },
-  { label: 'About', href: '/about-us' },
-  { label: 'Blog', href: '/blog' },
-  { label: 'Contact', href: '/get-a-demo' }
+  { label: 'Why Int3grate', href: '/#why' },
+  { label: 'What We Build', href: '/#solutions' },
+  { label: 'Control Panel', href: '/#control-panel' },
+  { label: 'Process', href: '/#process' },
+  { label: 'FAQ', href: '/#faq' },
+  { label: 'Work With Us', href: '/#work-with-us' },
+  { label: 'Contact', href: '/#contact' }
 ];
 
-/*
- * The single primary CTA from the spec (§1.4 / §12.1). It must remain visible
- * in the sticky header on every section after the hero. Anchor "/#apply" is a
- * placeholder — when Section 8 (Founding design partners) ships, the matching
- * id="apply" lands on its container and this CTA starts working everywhere
- * with no nav changes.
- */
 const PRIMARY_CTA = {
-  label: 'Apply to the founding cohort',
-  href: '/#apply'
+  label: 'Talk to our team',
+  href: '/#contact'
 };
 
 export const Navbar = () => {
@@ -40,7 +36,7 @@ export const Navbar = () => {
     <header className={styles.navbar}>
       <div className={styles.navbarContent}>
         <Link href="/" className={styles.navbarLogoLink}>
-          <span className={styles.navbarLogo}>Int3grate</span>
+          <span className={styles.navbarLogo}>Int3grate.ai</span>
         </Link>
 
         <nav className={styles.navbarNav} aria-label="Primary">

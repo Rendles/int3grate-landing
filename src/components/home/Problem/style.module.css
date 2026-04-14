@@ -1,47 +1,25 @@
-.problem {
+.why {
   padding-block: var(--space-24);
   padding-inline: var(--page-gutter);
   border-top: var(--border-width) var(--border-style) var(--border-default);
+  scroll-margin-top: var(--header-height);
 }
 
-.problemInner {
-  max-width: var(--container-default);
+.whyInner {
+  display: flex;
+  flex-direction: column;
+  max-width: var(--container-wide);
   margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-16);
+  gap: var(--space-6);
 }
 
-.problemHeader {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-5);
-  text-align: center;
-  align-items: center;
-}
-
-.problemHeading {
-  font-size: clamp(28px, 4vw, 40px);
-  font-weight: var(--font-weight-semibold);
-  letter-spacing: var(--tracking-tighter);
-  color: var(--text-primary);
-  max-width: 22ch;
-}
-
-.problemIntro {
-  font-size: var(--font-size-lg);
-  color: var(--text-secondary);
-  line-height: var(--line-height-relaxed);
-  max-width: 70ch;
-}
-
-.problemGrid {
+.whyGrid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: var(--space-6);
 }
 
-.problemCard {
+.whyCard {
   display: flex;
   flex-direction: column;
   gap: var(--space-4);
@@ -54,45 +32,43 @@
     background-color var(--duration-base) var(--ease-standard);
 }
 
-.problemCard:hover {
+.whyCard:hover {
   border-color: var(--border-strong);
   background-color: var(--surface-overlay);
 }
 
-.problemCardTitle {
+.whyCardIconWrap {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-lg);
+  background-color: var(--accent-soft);
+  color: var(--accent);
+}
+
+.whyCardTitle {
   font-size: var(--font-size-lg);
   font-weight: var(--font-weight-semibold);
   color: var(--text-primary);
   letter-spacing: var(--tracking-tight);
 }
 
-.problemCardBody {
+.whyCardText {
   font-size: var(--font-size-sm);
   color: var(--text-secondary);
   line-height: var(--line-height-relaxed);
 }
 
-.problemClosing {
-  text-align: center;
-  font-size: var(--font-size-md);
-  color: var(--text-primary);
-  line-height: var(--line-height-relaxed);
-  max-width: 64ch;
-  margin: 0 auto;
-}
-
 @media (max-width: 1024px) {
-  .problemGrid {
+  .whyGrid {
     grid-template-columns: minmax(0, 1fr);
   }
 }
 
 @media (max-width: 768px) {
-  .problem {
+  .why {
     padding-block: var(--space-16);
-  }
-
-  .problemInner {
-    gap: var(--space-12);
   }
 }

@@ -1,33 +1,44 @@
 import type { Metadata } from 'next';
+import Script from 'next/script';
 
 import {
-  FoundingPartners,
+  BlogPreview,
+  Contact,
+  ControlPanel,
+  Faq,
   Hero,
-  MvpLoop,
-  Problem,
-  Roadmap,
-  StackPosition,
-  UnderTheHood,
-  Vision
+  Process,
+  Solutions,
+  WhyIntegrate,
+  WorkWithUs
 } from '@/components/home';
+import { MOCK_BLOG_POSTS } from '@/components/home/BlogPreview/mock-posts';
+import { FAQ_JSONLD } from '@/components/home/Faq';
 
 export const metadata: Metadata = {
-  title: 'Home',
+  title: 'Int3grate.ai — Agentic AI integration for real business operations',
   description:
-    'Int3grate is the control plane for your AI workforce — managed AI workers with domain isolation, durable approval checkpoints, and a built-in cost ledger. Built for SMBs that want AI in operations, not just in chat.'
+    'Int3grate.ai designs and deploys practical AI workflows for growing companies. Automate execution across sales, admin, and operations while keeping humans in control.'
 };
 
 export default function HomePage() {
   return (
     <>
+      <Script
+        id="faq-jsonld"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_JSONLD) }}
+        strategy="beforeInteractive"
+      />
       <Hero />
-      <Problem />
-      <MvpLoop />
-      <Vision />
-      <UnderTheHood />
-      <Roadmap />
-      <StackPosition />
-      <FoundingPartners />
+      <WhyIntegrate />
+      <Solutions />
+      <ControlPanel />
+      <Process />
+      <Faq />
+      <WorkWithUs />
+      <Contact />
+      <BlogPreview posts={MOCK_BLOG_POSTS} />
     </>
   );
 }

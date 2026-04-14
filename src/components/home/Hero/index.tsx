@@ -1,55 +1,64 @@
-import { HeroDiagram } from './HeroDiagram';
+'use client';
+
+import { ArrowRight, Sparkles } from 'lucide-react';
+
+import { HeroDashboard } from './HeroDashboard';
 
 import styles from './style.module.css';
 
-import { Button, EmailNotifyInput, Link } from '@/shared';
+import { Button, Link } from '@/shared';
+
+const METRICS = [
+  { value: '24/7', label: 'Agent availability' },
+  { value: 'Human-in-loop', label: 'Approval controls' },
+  { value: 'Fast rollout', label: 'Practical implementation' }
+];
 
 export const Hero = () => {
   return (
     <section className={styles.hero} aria-labelledby="hero-heading">
       <div className={styles.heroInner}>
         <div className={styles.heroContent}>
+          <div className={styles.heroBadge} role="status">
+            <Sparkles size={14} className={styles.heroBadgeIcon} aria-hidden="true" />
+            <span className={styles.heroBadgeText}>Agentic AI integration for real business operations</span>
+          </div>
+
           <h1 id="hero-heading" className={styles.heroHeadline}>
-            The control plane for your AI workforce.
+            Turn repetitive work into AI-driven systems your team can actually trust.
           </h1>
 
           <p className={styles.heroSubheadline}>
-            {`Int3grate gives your team AI workers with real boundaries — separated by department, gated by human
-            approval, and tracked down to the dollar. Built for SMBs that want AI in operations, not just in chat.`}
+            {`Int3grate.ai designs and deploys practical AI workflows for growing companies. We help your business automate execution across sales, admin, and operations while keeping humans in control where it matters most.`}
           </p>
 
-          <div className={styles.heroBadge} role="status">
-            <span className={styles.heroBadgeDot} aria-hidden="true" />
-            <span className={styles.heroBadgeSegment}>Building in the open</span>
-            <span className={styles.heroBadgeSeparator} aria-hidden="true">
-              ·
-            </span>
-            <span className={styles.heroBadgeSegment}>Public launch mid-2026</span>
-            <span className={styles.heroBadgeSeparator} aria-hidden="true">
-              ·
-            </span>
-            <span className={styles.heroBadgeSegment}>Founding cohort forming now</span>
-          </div>
-
           <div className={styles.heroCtas}>
-            <Link href="/#apply">
+            <Link href="#contact">
               <Button color="green" size="lg">
-                Apply to the founding cohort
+                Request a consultation
+                <ArrowRight size={18} aria-hidden="true" />
               </Button>
             </Link>
 
-            <a href="#workflow" className={styles.heroSecondaryLink}>
-              See the workflow ↓
-            </a>
+            <Link href="#solutions">
+              <Button color="white" size="lg">
+                Explore solutions
+              </Button>
+            </Link>
           </div>
 
-          <div className={styles.heroNotify}>
-            <EmailNotifyInput id="hero-email-notify" helperText="Or just stay in the loop:" />
+          <div className={styles.heroMetrics}>
+            {METRICS.map((m) => (
+              <div key={m.label} className={styles.heroMetricCard}>
+                <span className={styles.heroMetricValue}>{m.value}</span>
+                <span className={styles.heroMetricLabel}>{m.label}</span>
+              </div>
+            ))}
           </div>
         </div>
 
         <div className={styles.heroVisual}>
-          <HeroDiagram />
+          <HeroDashboard />
         </div>
       </div>
     </section>

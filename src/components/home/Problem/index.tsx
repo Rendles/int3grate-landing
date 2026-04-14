@@ -1,51 +1,46 @@
+import { Cpu, ShieldCheck, Workflow } from 'lucide-react';
+
 import styles from './style.module.css';
 
-const PROBLEM_CARDS = [
+const FEATURES = [
   {
-    title: 'Black-box risk',
-    body: `An LLM agent that can send invoices, post to your social channels, or update your CRM is one bad output away
-    from a real-world incident. Without policy boundaries, approval checkpoints, and an audit trail, security says no —
-    and they're right to.`
+    icon: Workflow,
+    title: 'AI workflows that touch real operations',
+    text: 'We map repetitive processes across sales, admin, finance, and operations, then turn them into secure AI-driven workflows with human oversight.'
   },
   {
-    title: 'Data bleed between teams',
-    body: `Your finance data shouldn't be reachable by a marketing agent. Most agent frameworks treat memory as one
-    shared bucket. Real companies need department-level isolation from day one — not as a future enterprise upsell.`
+    icon: ShieldCheck,
+    title: 'Controlled automation',
+    text: 'Critical actions stay behind approvals. Your team decides what can run automatically and what must be reviewed before execution.'
   },
   {
-    title: 'Invisible cost',
-    body: `Tokens, tool calls, model chains. By the time you notice an AI workflow burned hundreds of dollars last
-    week, the budget is already gone. There's no per-user, per-agent, per-task ledger built into most stacks.`
+    icon: Cpu,
+    title: 'Built for adoption, not demos',
+    text: 'We focus on measurable outcomes: hours saved, faster response times, fewer bottlenecks, and clearer visibility into how agents perform.'
   }
 ];
 
-export const Problem = () => {
+export const WhyIntegrate = () => {
   return (
-    <section className={styles.problem} aria-labelledby="problem-heading">
-      <div className={styles.problemInner}>
-        <header className={styles.problemHeader}>
-          <h2 id="problem-heading" className={styles.problemHeading}>
-            {`Why AI agents don't ship inside real companies.`}
-          </h2>
-          <p className={styles.problemIntro}>
-            {`AI capability is growing faster than companies can safely adopt it. The blocker isn't awareness — it's
-            that LLM agents don't have the control surfaces a real business needs.`}
-          </p>
-        </header>
-
-        <div className={styles.problemGrid}>
-          {PROBLEM_CARDS.map((card) => (
-            <article key={card.title} className={styles.problemCard}>
-              <h3 className={styles.problemCardTitle}>{card.title}</h3>
-              <p className={styles.problemCardBody}>{card.body}</p>
-            </article>
-          ))}
+    <section id="why" className={styles.why} aria-labelledby="why-heading">
+      <div className={styles.whyInner}>
+        <h2 id="why-heading" className="sr-only">
+          Why Int3grate
+        </h2>
+        <div className={styles.whyGrid}>
+          {FEATURES.map((card) => {
+            const Icon = card.icon;
+            return (
+              <article key={card.title} className={styles.whyCard}>
+                <div className={styles.whyCardIconWrap}>
+                  <Icon size={24} aria-hidden="true" />
+                </div>
+                <h3 className={styles.whyCardTitle}>{card.title}</h3>
+                <p className={styles.whyCardText}>{card.text}</p>
+              </article>
+            );
+          })}
         </div>
-
-        <p className={styles.problemClosing}>
-          {`These three gaps — control, isolation, and cost visibility — are what stop AI from becoming an actual
-          operating layer in real companies.`}
-        </p>
       </div>
     </section>
   );
