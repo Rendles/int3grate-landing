@@ -4,7 +4,8 @@ import { MINERS_FAQS } from '@/constants/constants';
 import { Accordion } from '@/shared';
 
 export const metadata: Metadata = {
-  title: 'Miners'
+  title: 'Miners',
+  robots: { index: false, follow: true }
 };
 
 export default function FaqMinersPage() {

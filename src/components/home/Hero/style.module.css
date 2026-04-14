@@ -49,7 +49,7 @@
   letter-spacing: var(--tracking-tighter);
   font-weight: var(--font-weight-semibold);
   color: var(--text-primary);
-  max-width: 20ch;
+  max-width: 22ch;
 }
 
 .heroSubheadline {
@@ -108,10 +108,12 @@
   flex-direction: column;
   gap: var(--space-4);
   width: 100%;
+  max-width: 520px;
   padding: var(--space-6);
   border-radius: var(--radius-xl);
   background-color: var(--surface-raised);
   border: var(--border-width) var(--border-style) var(--border-default);
+  box-shadow: var(--shadow-lg);
 }
 
 .dashboardHeader {

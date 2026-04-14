@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import clsx from 'clsx';
 import { HelpCircle, Minus, Plus } from 'lucide-react';
 import { motion } from 'motion/react';
 
@@ -111,10 +112,11 @@ export const Faq = () => {
                     id={answerId}
                     role="region"
                     aria-labelledby={triggerId}
-                    className={styles.answerWrap}
-                    style={{ display: isOpen ? 'block' : 'none' }}>
-                    <div className={styles.answer}>
-                      <p className={styles.answerText}>{item.answer}</p>
+                    className={clsx(styles.answerWrap, isOpen && styles.answerWrapOpen)}>
+                    <div className={styles.answerInner}>
+                      <div className={styles.answer}>
+                        <p className={styles.answerText}>{item.answer}</p>
+                      </div>
                     </div>
                   </div>
                 </div>

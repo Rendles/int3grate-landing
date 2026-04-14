@@ -29,7 +29,7 @@
 .processLabel {
   font-size: var(--font-size-xs);
   font-weight: var(--font-weight-semibold);
-  color: var(--text-tertiary);
+  color: var(--accent);
   text-transform: uppercase;
   letter-spacing: var(--tracking-wide);
 }

@@ -12,9 +12,7 @@ import { Button, Link } from '@/shared';
 const NAV_LINKS = [
   { label: 'Why Int3grate', href: '/#why' },
   { label: 'What We Build', href: '/#solutions' },
-  { label: 'Control Panel', href: '/#control-panel' },
   { label: 'Process', href: '/#process' },
-  { label: 'FAQ', href: '/#faq' },
   { label: 'Work With Us', href: '/#work-with-us' },
   { label: 'Contact', href: '/#contact' }
 ];

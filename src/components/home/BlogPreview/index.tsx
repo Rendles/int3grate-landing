@@ -1,4 +1,4 @@
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, BookOpen } from 'lucide-react';
 
 import styles from './style.module.css';
 
@@ -16,7 +16,10 @@ export const BlogPreview = ({ posts }: BlogPreviewProps) => {
     <section id="blog" className={styles.section} aria-labelledby="blog-heading">
       <div className={styles.sectionInner}>
         <header className={styles.header}>
-          <span className={styles.eyebrow}>FROM THE BLOG</span>
+          <div className={styles.eyebrow}>
+            <BookOpen size={14} aria-hidden="true" />
+            <span>From the blog</span>
+          </div>
           <h2 id="blog-heading" className={styles.heading}>
             Ideas on AI, automation, and operations.
           </h2>
@@ -28,7 +31,7 @@ export const BlogPreview = ({ posts }: BlogPreviewProps) => {
         <div className={styles.grid}>
           {posts.map((post) => (
             <article key={post.documentId} className={styles.card}>
-              {post.media && (
+              {post.media ? (
                 <div className={styles.cardImageWrap}>
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
@@ -39,6 +42,10 @@ export const BlogPreview = ({ posts }: BlogPreviewProps) => {
                     height={post.media.height}
                     loading="lazy"
                   />
+                </div>
+              ) : (
+                <div className={styles.cardImagePlaceholder} aria-hidden="true">
+                  <BookOpen size={32} />
                 </div>
               )}
 

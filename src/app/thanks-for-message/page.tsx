@@ -3,7 +3,8 @@ import type { Metadata } from 'next';
 import styles from './style.module.css';
 
 export const metadata: Metadata = {
-  title: 'Thanks for your message'
+  title: 'Thanks for your message',
+  robots: { index: false, follow: false }
 };
 
 export default function ThanksForMessagePage() {

@@ -4,7 +4,8 @@ import { MAINTENANCE_FAQS } from '@/constants/constants';
 import { Accordion } from '@/shared';
 
 export const metadata: Metadata = {
-  title: 'Maintenance'
+  title: 'Maintenance',
+  robots: { index: false, follow: true }
 };
 
 export default function FaqMaintenancePage() {

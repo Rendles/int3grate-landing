@@ -5,8 +5,7 @@ import { Link } from '@/shared';
 const FOOTER_NAV = [
   { label: 'Why Int3grate', href: '/#why' },
   { label: 'Solutions', href: '/#solutions' },
-  { label: 'Control Panel', href: '/#control-panel' },
-  { label: 'FAQ', href: '/#faq' },
+  { label: 'Process', href: '/#process' },
   { label: 'Work With Us', href: '/#work-with-us' },
   { label: 'Contact', href: '/#contact' }
 ];

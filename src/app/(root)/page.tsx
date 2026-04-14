@@ -18,7 +18,18 @@ import { FAQ_JSONLD } from '@/components/home/Faq';
 export const metadata: Metadata = {
   title: 'Int3grate.ai — Agentic AI integration for real business operations',
   description:
-    'Int3grate.ai designs and deploys practical AI workflows for growing companies. Automate execution across sales, admin, and operations while keeping humans in control.'
+    'Int3grate.ai designs and deploys practical AI workflows for growing companies. Automate execution across sales, admin, and operations while keeping humans in control.',
+  openGraph: {
+    title: 'Int3grate.ai — Agentic AI integration for real business operations',
+    description:
+      'Practical AI workflows for growing companies. Automate sales, admin, and operations while keeping humans in control.',
+    type: 'website'
+  },
+  twitter: {
+    title: 'Int3grate.ai — Agentic AI integration for real business operations',
+    description:
+      'Practical AI workflows for growing companies. Automate sales, admin, and operations while keeping humans in control.'
+  }
 };
 
 export default function HomePage() {

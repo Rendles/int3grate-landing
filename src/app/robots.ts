@@ -4,7 +4,8 @@ export default function robots(): MetadataRoute.Robots {
   return {
     rules: {
       userAgent: '*',
-      allow: '/'
+      allow: '/',
+      disallow: ['/thanks-for-message']
     },
     sitemap: `${process.env.NEXT_PUBLIC_BASE_URL ?? 'http://localhost:3000'}/sitemap.xml`
   };

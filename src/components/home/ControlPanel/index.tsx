@@ -1,5 +1,6 @@
 'use client';
 
+import { LayoutGrid } from 'lucide-react';
 import { motion } from 'motion/react';
 
 import styles from './style.module.css';
@@ -101,7 +102,10 @@ export const ControlPanel = () => {
       transition={{ duration: 0.55 }}>
       <div className={styles.sectionInner}>
         <header className={styles.header}>
-          <span className={styles.eyebrow}>INSIDE THE PLATFORM</span>
+          <div className={styles.eyebrow}>
+            <LayoutGrid size={14} aria-hidden="true" />
+            <span>Inside the platform</span>
+          </div>
           <h2 id="cp-heading" className={styles.heading}>
             Your company, from above.
           </h2>

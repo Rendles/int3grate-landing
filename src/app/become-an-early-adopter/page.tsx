@@ -3,7 +3,8 @@ import type { Metadata } from 'next';
 import styles from './style.module.css';
 
 export const metadata: Metadata = {
-  title: 'Become an Early Adopter'
+  title: 'Become an Early Adopter',
+  robots: { index: false, follow: true }
 };
 
 export default function BecomeAnEarlyAdopterPage() {

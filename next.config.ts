@@ -9,7 +9,7 @@ const nextConfig: NextConfig = {
       {
         source: '/faq/main',
         destination: '/faq',
-        permanent: false
+        permanent: true
       }
     ];
   },

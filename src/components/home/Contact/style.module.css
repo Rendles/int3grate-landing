@@ -10,7 +10,7 @@
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: var(--space-8);
+  gap: var(--space-5);
   align-items: flex-start;
 }
 

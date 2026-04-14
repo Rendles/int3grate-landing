@@ -21,11 +21,22 @@
 }
 
 .eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--radius-pill);
+  background-color: var(--surface-raised);
+  border: var(--border-width) var(--border-style) var(--border-default);
+  width: fit-content;
   font-size: var(--font-size-xs);
-  font-weight: var(--font-weight-semibold);
+  font-weight: var(--font-weight-medium);
+  color: var(--text-secondary);
+  letter-spacing: var(--tracking-tight);
+}
+
+.eyebrow svg {
   color: var(--accent);
-  text-transform: uppercase;
-  letter-spacing: var(--tracking-wide);
 }
 
 .heading {
@@ -232,8 +243,8 @@
 }
 
 .bottomCaption {
-  font-size: var(--font-size-sm);
-  color: var(--text-tertiary);
+  font-size: var(--font-size-base);
+  color: var(--text-secondary);
   line-height: var(--line-height-relaxed);
   max-width: 64ch;
 }
