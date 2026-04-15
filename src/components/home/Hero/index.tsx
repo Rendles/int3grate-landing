@@ -2,6 +2,7 @@
 
 import { ArrowRight, Sparkles } from 'lucide-react';
 
+import { HeroBackground } from './HeroBackground';
 import { HeroDashboard } from './HeroDashboard';
 
 import styles from './style.module.css';
@@ -17,6 +18,7 @@ const METRICS = [
 export const Hero = () => {
   return (
     <section className={styles.hero} aria-labelledby="hero-heading">
+      <HeroBackground />
       <div className={styles.heroInner}>
         <div className={styles.heroContent}>
           <div className={styles.heroBadge} role="status">

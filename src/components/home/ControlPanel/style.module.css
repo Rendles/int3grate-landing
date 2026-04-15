@@ -63,6 +63,58 @@
   border-radius: var(--radius-2xl);
   background-color: var(--surface-sunken);
   border: var(--border-width) var(--border-style) var(--border-default);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Frame decorative background */
+.frameBgGrid {
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+  background-size: 32px 32px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.frameBgGlow {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background:
+    radial-gradient(ellipse 40% 50% at 15% 30%, rgba(15, 98, 254, 0.06) 0%, transparent 70%),
+    radial-gradient(ellipse 35% 45% at 85% 70%, rgba(99, 102, 241, 0.04) 0%, transparent 70%);
+}
+
+.frameBgScan {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background: linear-gradient(180deg, transparent 0%, rgba(15, 98, 254, 0.025) 50%, transparent 100%);
+  background-size: 100% 200%;
+  animation: frameScan 7s ease-in-out infinite;
+}
+
+@keyframes frameScan {
+  0%,
+  100% {
+    background-position: 0% 0%;
+    opacity: 0;
+  }
+  12% {
+    opacity: 1;
+  }
+  50% {
+    background-position: 0% 100%;
+  }
+  88% {
+    opacity: 1;
+  }
+  95% {
+    opacity: 0;
+  }
 }
 
 .frameHeader {
@@ -70,6 +122,8 @@
   justify-content: space-between;
   align-items: flex-start;
   gap: var(--space-4);
+  position: relative;
+  z-index: 1;
 }
 
 .frameHeaderLeft {
@@ -102,23 +156,38 @@
   font-weight: var(--font-weight-medium);
   color: var(--accent);
   white-space: nowrap;
+  box-shadow: 0 0 12px rgba(15, 98, 254, 0.1);
 }
 
 .frameBadgeDot {
-  width: 6px;
-  height: 6px;
+  width: 7px;
+  height: 7px;
   border-radius: var(--radius-pill);
   background-color: var(--accent);
-  animation: pulse 2s ease-in-out infinite;
+  box-shadow: 0 0 6px var(--accent);
+  animation: badgePulse 2.5s ease-in-out infinite;
+  flex-shrink: 0;
 }
 
-@keyframes pulse {
+.frameBadgeDotStatic {
+  width: 7px;
+  height: 7px;
+  border-radius: var(--radius-pill);
+  background-color: var(--accent);
+  flex-shrink: 0;
+}
+
+@keyframes badgePulse {
   0%,
   100% {
     opacity: 1;
+    transform: scale(1);
+    box-shadow: 0 0 6px var(--accent);
   }
   50% {
-    opacity: 0.4;
+    opacity: 0.5;
+    transform: scale(1.25);
+    box-shadow: 0 0 10px var(--accent);
   }
 }
 
@@ -127,6 +196,8 @@
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: var(--space-5);
+  position: relative;
+  z-index: 1;
 }
 
 .card {
@@ -137,6 +208,28 @@
   border-radius: var(--radius-xl);
   background-color: var(--surface-raised);
   border: var(--border-width) var(--border-style) var(--border-default);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.3),
+    0 0 24px rgba(15, 98, 254, 0.06);
+  border-color: var(--border-strong);
+}
+
+.card:hover .metricCell {
+  border-color: var(--border-strong);
+  background-color: rgba(20, 20, 26, 0.8);
+}
+
+.card:hover .outcomeRow {
+  background-color: rgba(99, 102, 241, 0.16);
+  border-color: rgba(99, 102, 241, 0.22);
 }
 
 .cardHeader {
@@ -196,6 +289,9 @@
   border-radius: var(--radius-xl);
   border: var(--border-width) var(--border-style) var(--border-default);
   background-color: var(--surface-overlay);
+  transition:
+    border-color 0.3s ease,
+    background-color 0.3s ease;
 }
 
 .metricLabel {
@@ -208,6 +304,45 @@
   font-weight: var(--font-weight-semibold);
   color: var(--text-primary);
   font-variant-numeric: tabular-nums;
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+/* Efficiency mini bar */
+.efficiencyBar {
+  height: 3px;
+  width: 100%;
+  border-radius: 2px;
+  background-color: var(--border-default);
+  margin-top: var(--space-1);
+  overflow: hidden;
+}
+
+.efficiencyFill {
+  height: 100%;
+  border-radius: 2px;
+  background-color: var(--accent);
+  transition: width 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Risk level dots */
+.riskDot {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.riskDotLow {
+  background-color: var(--status-success);
+  box-shadow: 0 0 4px rgba(52, 211, 153, 0.4);
+}
+
+.riskDotMedium {
+  background-color: var(--status-warning);
+  box-shadow: 0 0 4px rgba(251, 191, 36, 0.4);
 }
 
 /* Outcome signal */
@@ -219,6 +354,38 @@
   border-radius: var(--radius-xl);
   background-color: var(--accent-soft);
   border: var(--border-width) var(--border-style) rgba(99, 102, 241, 0.15);
+  position: relative;
+  overflow: hidden;
+  transition:
+    background-color 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.outcomeRowAnimated::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    105deg,
+    transparent 0%,
+    transparent 35%,
+    rgba(99, 102, 241, 0.08) 50%,
+    transparent 65%,
+    transparent 100%
+  );
+  background-size: 250% 100%;
+  animation: outcomeShimmer 6s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes outcomeShimmer {
+  0%,
+  100% {
+    background-position: 250% 0;
+  }
+  50% {
+    background-position: -100% 0;
+  }
 }
 
 .outcomeLabel {
@@ -233,6 +400,14 @@
   font-size: var(--font-size-sm);
   font-weight: var(--font-weight-medium);
   color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.outcomeIcon {
+  color: var(--accent);
+  flex-shrink: 0;
 }
 
 /* Bottom caption + CTA */
@@ -247,6 +422,31 @@
   color: var(--text-secondary);
   line-height: var(--line-height-relaxed);
   max-width: 64ch;
+}
+
+/* Accessibility: disable decorative animations */
+@media (prefers-reduced-motion: reduce) {
+  .frameBadgeDot {
+    animation: none;
+    box-shadow: none;
+  }
+
+  .frameBgScan {
+    display: none;
+  }
+
+  .outcomeRowAnimated::after {
+    animation: none;
+    display: none;
+  }
+
+  .card:hover {
+    transform: none;
+  }
+
+  .efficiencyFill {
+    transition: none;
+  }
 }
 
 @media (max-width: 1024px) {
@@ -271,5 +471,13 @@
   .frameHeader {
     flex-direction: column;
     gap: var(--space-3);
+  }
+
+  .frameBgGrid {
+    opacity: 0.4;
+  }
+
+  .card:hover {
+    transform: none;
   }
 }

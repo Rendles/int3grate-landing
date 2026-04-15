@@ -5,8 +5,9 @@
    * accent. No AI startup gradient soup." — accent is intentionally flat,
    * not a gradient.
    */
-  --accent: #6366f1;
-  --accent-strong: #4f46e5;
+  /* --accent: #6366f1; */
+  --accent: #0f62fe;
+  --accent-strong: #0c57e4;
   --accent-soft: rgba(99, 102, 241, 0.12);
   --accent-contrast: #ffffff;
 

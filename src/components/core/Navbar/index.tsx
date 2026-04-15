@@ -7,7 +7,7 @@ import { Toolbar } from '..';
 
 import styles from './style.module.css';
 
-import { Button, Link } from '@/shared';
+import { Button, Image, Link } from '@/shared';
 
 const NAV_LINKS = [
   { label: 'Why Int3grate', href: '/#why' },
@@ -34,6 +34,7 @@ export const Navbar = () => {
     <header className={styles.navbar}>
       <div className={styles.navbarContent}>
         <Link href="/" className={styles.navbarLogoLink}>
+          <Image src="/icons/logo.svg" alt="Int3grate.ai logo" width={24} height={24} />
           <span className={styles.navbarLogo}>Int3grate.ai</span>
         </Link>
 

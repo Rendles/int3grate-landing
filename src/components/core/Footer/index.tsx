@@ -1,6 +1,6 @@
 import styles from './style.module.css';
 
-import { Link } from '@/shared';
+import { Image, Link } from '@/shared';
 
 const FOOTER_NAV = [
   { label: 'Why Int3grate', href: '/#why' },
@@ -17,6 +17,7 @@ export const Footer = () => {
         <div className={styles.footerTop}>
           <div className={styles.footerBrand}>
             <Link href="/" className={styles.footerLogoLink}>
+              <Image src="/icons/logo.svg" alt="Int3grate.ai logo" width={24} height={24} />
               <span className={styles.footerLogo}>Int3grate.ai</span>
             </Link>
           </div>

@@ -51,6 +51,7 @@ export const Toolbar = ({ navLinks, primaryCta }: ToolbarProps) => {
         <div className={styles.toolbar} role="dialog" aria-modal="true" aria-label="Navigation">
           <div className={styles.toolbarTop}>
             <Link className={styles.toolbarLogoLink} href="/" onClick={handleClose}>
+              <Image src="/icons/logo.svg" alt="Int3grate.ai logo" width={24} height={24} />
               <span className={styles.toolbarLogo}>Int3grate</span>
             </Link>
 
